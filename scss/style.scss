@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
-$accentColor: rgb(255, 177, 10);
+$accentColor: rgba(255, 177, 10, 0.996);
 $noAccentColor: #2b2a2a;
 $linkColor: #dcdcdc;
 $linkColorActive: #ffffff;
@@ -65,6 +65,7 @@ body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                flex-direction: row-reverse;
                 color: $linkColor;
                 background-color: $noAccentColor;
                 padding: 20px;
@@ -76,6 +77,7 @@ body {
                 &:hover {
                     color: $linkColorActive;
                     background-color: $accentColor;
+                    box-shadow: 0px 0px 15px 3px rgba(255, 177, 10, 0.8);
                 }
 
                 .icon {
@@ -220,6 +222,7 @@ body {
                 background-color: #000;
                 background-image: url('../img/zwartevilt.png');
                 background-repeat: repeat;
+                box-shadow: 0px 8px 15px 7px rgba(0, 0, 0, 0.5);
                 overflow: hidden;
 
                 img {
@@ -276,8 +279,13 @@ body {
                         z-index: -1;
                     }
 
+                    &:hover{
+                        box-shadow: 0px 0px 15px 3px rgba(255, 177, 10, 0.8);
+                    }
+
                     &:hover .hover-block {
                         width: 100%;
+                        
                     }
 
                     .icon-block {
