@@ -1,9 +1,16 @@
+// Font Roboto 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+// font-family: 'Roboto', sans-serif;
+
+// Font Poppins
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+// font-family: 'Poppins', sans-serif;
 
 $accentColor: rgba(255, 177, 10, 0.996);
 $noAccentColor: #2b2a2a;
 
 $textColor: #ffffff;
+$titleLetterSpacing: 5px;
 
 $linkColor: #dcdcdc;
 $linkColorActive: #ffffff;
@@ -361,32 +368,43 @@ body {
         width: 100%;
         padding: 25px 10px;
         position: relative;
+        
 
         h1 {
             position: absolute;
             text-transform: uppercase;
             top: 50%;
             left: 50%;
+            font-family: 'Poppins', sans-serif;
             font-weight: 900;
             color: $textColor;
             font-size: 50px;
             transform: translate(-50%, -50%);
 
             span {
+                font-family: 'Poppins', sans-serif;
                 color: $accentColor;
             }
         }
 
         .bg-title {
+            
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 100px;
             text-transform: uppercase;
             color: $noAccentColor;
+            font-family: 'Poppins', sans-serif;
             font-weight: 900;
-            letter-spacing: 1.7;
+            letter-spacing: $titleLetterSpacing;
         }
+    }
+
+    .about-me-block{
+        width: 82%;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 }
 
