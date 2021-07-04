@@ -35,6 +35,17 @@ body {
   background-color: #111111;
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: #2b2a2a;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 100%;
+  background-color: rgba(255, 177, 10, 0.996);
+  border-radius: 3px;
+}
+
 #header header .desktop-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -312,23 +323,26 @@ body {
   text-transform: uppercase;
   overflow: hidden;
 }
-.home .container main .info .more-info-btn .hover-block {
+.home .container main .info .more-info-btn::before {
+  content: "";
+  display: block;
   position: absolute;
-  background-color: rgba(255, 177, 10, 0.996);
   top: 0;
   right: 0;
-  width: 0;
+  width: 0%;
   height: 100%;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
+  background-color: rgba(255, 177, 10, 0.996);
   z-index: -1;
+  border-radius: 10%;
 }
 .home .container main .info .more-info-btn:hover {
   -webkit-box-shadow: 0px 0px 15px 3px rgba(255, 177, 10, 0.8);
           box-shadow: 0px 0px 15px 3px rgba(255, 177, 10, 0.8);
 }
-.home .container main .info .more-info-btn:hover .hover-block {
-  width: 100%;
+.home .container main .info .more-info-btn:hover::before {
+  width: 110%;
 }
 .home .container main .info .more-info-btn .icon-block {
   display: -webkit-box;
@@ -353,7 +367,7 @@ body {
 }
 #about .title-section {
   width: 100%;
-  padding: 25px 10px;
+  padding: 35px 10px;
   position: relative;
 }
 #about .title-section h1 {
@@ -382,7 +396,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 100px;
+  font-size: 110px;
   text-transform: uppercase;
   color: #2b2a2a;
   font-family: "Poppins", sans-serif;
@@ -394,7 +408,216 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+#about .about-me-block .about-info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+#about .about-me-block .about-info .info h3 {
+  color: #ffffff;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+#about .about-me-block .about-info .info .presonal-info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+#about .about-me-block .about-info .info .presonal-info p {
+  padding: 10px 0;
+  color: #dcdcdc;
+}
+#about .about-me-block .about-info .info .presonal-info p span {
+  color: #ffffff;
+}
+#about .about-me-block .about-info .achievements {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 25px 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+}
+#about .about-me-block .about-info .achievements .item {
+  padding: 25px 40px;
+  border: 1px solid #2b2a2a;
+  border-radius: 3px;
+}
+#about .about-me-block .about-info .achievements .item .count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  font-family: "Poppins", sans-serif;
+  color: rgba(255, 177, 10, 0.996);
+  font-size: 45px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+#about .about-me-block .about-info .achievements .item .count span {
+  font-weight: normal;
+  font-size: 30px;
+}
+#about .about-me-block .about-info .achievements .item .description {
+  padding-left: 25px;
+  color: #ffffff;
+  position: relative;
+  text-transform: uppercase;
+}
+#about .about-me-block .about-info .achievements .item .description::after {
+  content: "";
+  width: 25px;
+  height: 1px;
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  background-color: #2b2a2a;
+}
+#about .about-me-block .me-skills {
+  padding-top: 50px;
+}
+#about .about-me-block .me-skills h2 {
+  padding-top: 30px;
+  text-align: center;
+  font-size: 25px;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: relative;
+}
+#about .about-me-block .me-skills h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 300px;
+  height: 1px;
+  background-color: #2b2a2a;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+#about .about-me-block .me-skills .skills-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 25px;
+}
+#about .about-me-block .me-skills .skills-block .item {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#about .about-me-block .me-skills .skills-block .item .persent-circle-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+#about .about-me-block .me-skills .skills-block .item .persent-circle-block svg .progress-ring-circle-bg {
+  stroke: #2b2a2a;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  fill: transparent;
+}
+#about .about-me-block .me-skills .skills-block .item .persent-circle-block svg .progress-ring-circle {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  stroke: rgba(255, 177, 10, 0.996);
+  fill: transparent;
+}
+#about .about-me-block .me-skills .skills-block .item .persent-circle-block span {
+  position: absolute;
+  color: #ffffff;
+  top: 50%;
+  font-size: 30px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+#about .about-me-block .me-skills .skills-block .item p {
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 10px 0 50px 0;
+}
 
+#contact {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#contact .title-section {
+  width: 100%;
+  padding: 35px 10px;
+  position: relative;
+}
+#contact .title-section h1 {
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  left: 50%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 50px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+#contact .title-section h1 span {
+  font-family: "Poppins", sans-serif;
+  color: rgba(255, 177, 10, 0.996);
+}
+#contact .title-section .bg-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 110px;
+  text-transform: uppercase;
+  color: #2b2a2a;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  letter-spacing: 5px;
+}
+
+@media screen and (max-width: 1060px) {
+  #about .about-me-block .about-info {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  #about .about-me-block .about-info .info {
+    padding-bottom: 20px;
+  }
+}
 @media screen and (max-width: 900px) {
   #header header .desktop-menu {
     display: none;
@@ -430,5 +653,34 @@ body {
   }
   .home .container main .info .more-info-btn {
     margin: 0 auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  #about .about-me-block .me-skills .skills-block .item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 650px) {
+  #about .title-section h1 {
+    font-size: 40px;
+  }
+  #about .title-section .bg-title {
+    font-size: 80px;
+  }
+  #about .about-me-block .about-info .achievements {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 420px) {
+  #about .title-section h1 {
+    font-size: 30px;
+  }
+  #about .title-section .bg-title {
+    font-size: 50px;
+  }
+  #about .about-me-block .about-info .info .presonal-info {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
