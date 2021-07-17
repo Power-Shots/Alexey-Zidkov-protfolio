@@ -5,7 +5,7 @@ class Header{
         this.menuList = [
             {title: 'home', path: 'index.html', icon: 'fas fa-home'},
             {title: 'about', path: 'about.html', icon: 'fas fa-user'},
-            {title: 'portfolio', path: 'portfolio.html', icon: 'fas fa-suitcase'},
+            // {title: 'portfolio', path: 'portfolio.html', icon: 'fas fa-suitcase'},
             {title: 'contact', path: 'contact.html', icon: 'fas fa-envelope-open'},
         ]
         this.start();
