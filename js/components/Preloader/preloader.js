@@ -19,7 +19,7 @@ class Preloader{
         `;
         document.body.prepend(preloaderBlock);
         // window.addEventListener('load', this.moved.bind(this));
-        this.moved()
+        window.addEventListener('load', this.moved())
         // this.preloaderTimer = setInterval(this.moved(), 1);
     }
 
