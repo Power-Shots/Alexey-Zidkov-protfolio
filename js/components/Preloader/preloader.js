@@ -6,9 +6,11 @@ class Preloader{
 
     start(){
         let preloaderBlock = document.createElement('div');
+        let height = document.documentElement.clientHeight;
+        console.log(height)
         preloaderBlock.id = 'preloader';
         preloaderBlock.classList.add('preloader');
-        // preloaderBlock.setAttribute('height', '100')
+        preloaderBlock.style.height = `${height}px`;
         preloaderBlock.innerHTML = `
             <div class="preloader-line">
             
@@ -18,9 +20,7 @@ class Preloader{
             </div>
         `;
         document.body.prepend(preloaderBlock);
-        // window.addEventListener('load', this.moved.bind(this));
-        window.addEventListener('load', this.moved())
-        // this.preloaderTimer = setInterval(this.moved(), 1);
+        this.moved()
     }
 
     moved(){

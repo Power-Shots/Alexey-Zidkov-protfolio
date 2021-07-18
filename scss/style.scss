@@ -215,7 +215,6 @@ body {
 // Preloader start
 .preloader {
     position: fixed;
-    height: 100vh;
     width: 100%;
     bottom: 0;
     display: flex;
@@ -236,10 +235,6 @@ body {
         background-color: $theamColor;
         transition: all 0.5 linear;
     }
-
-    // .preloader-bg-hide {
-    //     height: 0%;
-    // }
 }
 
 .preloader-hide {
