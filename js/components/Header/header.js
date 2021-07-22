@@ -16,8 +16,6 @@ class Header{
         this.selectPage = page[page.length-1];
         this.render();
         this.headerBlock.addEventListener('mouseover', this.showTitle.bind(this));
-        this.headerBlock.addEventListener('click', this.checkTarget.bind(this));
-
     }
 
     render(){
@@ -55,9 +53,9 @@ class Header{
         let html = this.createLinks();
 
         mobileBlock.innerHTML = `
-            <a href="#" class="switch-menu__btn" data-status="close">
-                <i class="fas fa-bars"></i>
-            </a>
+            <button onclick="header.toggeleMobileMenu()" class="switch-menu__btn" data-status="close">
+                <i class="fas fa-bars icon"></i>
+            </button>
             <nav class="mobile-menu">
                 <ul>
                     ${html}
@@ -77,45 +75,36 @@ class Header{
             }
             
             return `
-                        <li>
-                            <a href="${item.path}" class="header-link${activeEl}">
-                                <i class="${item.icon} icon"></i>
-                                <span class="nav-title">${item.title}</span>
-                            </a>
-                        </li>
-                    `;
+                    <li>
+                        <a href="${item.path}" class="header-link${activeEl}">
+                            <i class="${item.icon} icon"></i>
+                            <span class="nav-title">${item.title}</span>
+                        </a>
+                    </li>
+                `;
 
         });
         return content.join('');
     }
 
-    checkTarget(e){        
-        if(e.target.closest('.switch-menu__btn')){
-            e.preventDefault()
-            this.toggeleMobileMenu(e.target);
-        }
-
-    }
-
-    // redirection(el){
-    //     let myHref = el.getAttribute('href');
-    //     localStorage.setItem('selectPage', myHref)
-    //     // window.location.href = myHref;
-    // }
-
-    toggeleMobileMenu(el){
-        let menuStatus = el.getAttribute('data-status');
+    toggeleMobileMenu(){
+        let menuBtn = document.querySelector('.switch-menu__btn')
+        let menuStatus = menuBtn.getAttribute('data-status');
         let mobileMenu = this.headerBlock.querySelector('.mobile-menu');
         if(menuStatus === 'close'){
-            el.innerHTML = '<i class="fas fa-times"></i>';
-            el.setAttribute('data-status', 'open');
+            mobileMenu.classList.add('mobile-menu-active');
+            document.body.style.overflow = 'hidden'
+            menuBtn.innerHTML = '<i class="fas fa-times"></i>';
+            menuBtn.setAttribute('data-status', 'open');
 
         }
-        else{
-            el.innerHTML = '<i class="fas fa-bars"></i>';
-            el.setAttribute('data-status', 'close');
+        else if (menuStatus === 'open'){
+            mobileMenu.classList.remove('mobile-menu-active');
+            document.body.style.overflow = ''
+            menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            menuBtn.setAttribute('data-status', 'close');
         }
-        mobileMenu.classList.toggle('mobile-menu-active');
+        
     }
 
     showTitle(e){    

@@ -133,6 +133,8 @@ body {
   border-radius: 5px;
   color: #dcdcdc;
   text-decoration: none;
+  outline: none;
+  border: none;
   background-color: #2b2a2a;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -140,19 +142,20 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
+  position: fixed;
   z-index: 100;
   top: 20px;
   right: 20px;
 }
 #header header .mobile-menu-block .mobile-menu {
   width: 0%;
-  min-height: 100vh;
+  height: 100vh;
   background: #2b2a2a;
-  position: absolute;
+  position: fixed;
   z-index: 10;
   top: 0;
   left: 0;
+  cursor: pointer;
   -webkit-transition: width 0.2s ease-out;
   transition: width 0.2s ease-out;
   overflow: hidden;
@@ -191,6 +194,7 @@ body {
 }
 #header header .mobile-menu-block .mobile-menu-active {
   width: 100%;
+  overflow: auto;
 }
 
 .preloader {
@@ -924,6 +928,8 @@ body {
   }
 
   #about .title-section {
+    z-index: 1;
+    position: fixed;
     background-color: #2b2a2a;
     padding: 22px;
     margin-bottom: 30px;
@@ -938,12 +944,17 @@ body {
     display: none;
     font-size: 80px;
   }
+  #about .about-me-block {
+    padding: 100px 15px 0 15px;
+  }
   #about .about-me-block .about-info .achievements {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 
   #contact .title-section {
+    z-index: 1;
+    position: fixed;
     background-color: #2b2a2a;
     padding: 22px;
     margin-bottom: 30px;
@@ -960,7 +971,7 @@ body {
   }
   #contact .me-contact section {
     width: 100%;
-    padding: 0 15px;
+    padding: 100px 15px 0 15px;
   }
   #contact .me-contact section .contact-form-block .contact-form .top-inputs {
     -ms-grid-columns: 1fr;

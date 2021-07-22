@@ -144,11 +144,13 @@ body {
             border-radius: 5px;
             color: #dcdcdc;
             text-decoration: none;
+            outline: none;
+            border: none; 
             background-color: $noAccentColor;
             justify-content: center;
             align-items: center;
 
-            position: absolute;
+            position: fixed;
             z-index: 100;
             top: 20px;
             right: 20px;
@@ -156,12 +158,13 @@ body {
 
         .mobile-menu {
             width: 0%;
-            min-height: 100vh;
-            background: $noAccentColor;
-            position: absolute;
+            height: 100vh;
+            background: $noAccentColor;    
+            position: fixed;
             z-index: 10;
             top: 0;
             left: 0;
+            cursor: pointer;
             transition: width 0.2s ease-out;
             overflow: hidden;
 
@@ -204,6 +207,7 @@ body {
 
         .mobile-menu-active {
             width: 100%;
+            overflow: auto;
         }
     }
 
@@ -945,6 +949,8 @@ body {
 
     #about {
         .title-section {
+            z-index: 1;
+            position: fixed;
             background-color: $noAccentColor;
             padding: 22px;
             margin-bottom: 30px;
@@ -962,6 +968,7 @@ body {
         }
 
         .about-me-block {
+            padding: 100px 15px 0 15px;
             .about-info {
                 .achievements {
                     grid-template-columns: 1fr;
@@ -972,6 +979,8 @@ body {
 
     #contact {
         .title-section {
+            z-index: 1;
+            position: fixed;
             background-color: $noAccentColor;
             padding: 22px;
             margin-bottom: 30px;
@@ -990,7 +999,7 @@ body {
 
         .me-contact section {
             width: 100%;
-            padding: 0 15px;
+            padding: 100px 15px 0 15px;
 
             .contact-form-block .contact-form {
                 .top-inputs {
