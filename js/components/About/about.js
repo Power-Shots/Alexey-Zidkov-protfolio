@@ -43,15 +43,59 @@ class AboutMe {
             content += `
                 <p>${item}: <span>${myInfo[item]}</span></p>
             `;
-            console.log(content)
         }
         blockInfo.innerHTML = `
             <h3>Персональная информация</h3>
             <div class="presonal-info">
                 ${content}
             </div>
+            <div class="btn-block">
+                <button class="open-modal-btn" onclick="aboutMe1.createModalWindow()">
+                    <span>Скачать CV</span>
+                    <div class="icon-block">
+                        <i class="fas fa-file-download icon"></i>
+                    </div>
+                </button>
+            </div> 
         `;
         return blockInfo;
+    }
+
+    createModalWindow(e){
+        let modalDiv = document.createElement('div');
+        modalDiv.id = 'modalWindow';
+        modalDiv.innerHTML = `
+            <div class="cover" onclick="aboutMe1.closeModalWindow()">
+            </div>
+
+            <div class="modal-block">
+                <button class="close" onclick="aboutMe1.closeModalWindow()">
+                    <i class="fas fa-times icon"></i>
+                </button>
+                <h3>Select the language</h3>
+                    <div class="select-lang-block">
+                        <a href="file/CV/CV_Alexsey_Zhidkov_RU.pdf" class="download-link" download>
+                            English
+                        </a>
+                        <a href="file/CV/CV_Alexsey_Zhidkov_RU.pdf" class="download-link" download>
+                            Russian
+                        </a>  
+                    </div>
+                
+            </div>
+        `;
+        document.body.prepend(modalDiv);
+        window.addEventListener('keydown', this.checkPressKey.bind(this))
+    }
+    
+
+    closeModalWindow(){
+        let modalDiv = document.querySelector('#modalWindow');
+        if(modalDiv) modalDiv.remove()
+    }
+
+    checkPressKey(e){
+        if(e.key === "Escape") this.closeModalWindow();
     }
 
     createAchievements(){
@@ -112,8 +156,6 @@ class MeSkills {
                 ${skillsBlocks}
             </div>
         `;
-
-        console.log(this.block)
         this.block.append(skillsSection)
     }
 
@@ -180,7 +222,7 @@ class MeSkills {
     }
 
     setPersent(persent, circumference){
-        // console.log(persent, circumference);
+    
         let offset = circumference - persent / 100 * circumference;
         return offset;
     }
