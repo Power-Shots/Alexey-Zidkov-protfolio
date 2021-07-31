@@ -28,11 +28,11 @@ class AboutMe {
             'Имя': 'Алексей',
             'Адресс': 'Славянск, Дон. обл.',
             'Фамилия': 'Жидков',
-            'Телефон': '+3854452476',
+            'Телефон': '+380660312518',
             'Возрост': '20 Лет',
             'E-mail': 'powershot317@gmail.com',
             'Национальность': 'Украинец',
-            'Telegram': '+3842442747',
+            'Telegram': '+380660312518',
             'Занятость': 'Доступен',
             'Языки': 'Украинкий, Русский, Английский',
         }
@@ -72,13 +72,13 @@ class AboutMe {
                 <button class="close" onclick="aboutMe1.closeModalWindow()">
                     <i class="fas fa-times icon"></i>
                 </button>
-                <h3>Select the language</h3>
+                <h3>Выберите язык</h3>
                     <div class="select-lang-block">
                         <a href="file/CV/CV_Alexsey_Zhidkov_RU.pdf" class="download-link" download>
-                            English
+                            Англйский
                         </a>
                         <a href="file/CV/CV_Alexsey_Zhidkov_RU.pdf" class="download-link" download>
-                            Russian
+                            Русский
                         </a>  
                     </div>
                 
@@ -91,7 +91,7 @@ class AboutMe {
 
     closeModalWindow(){
         let modalDiv = document.querySelector('#modalWindow');
-        if(modalDiv) modalDiv.remove()
+        if(modalDiv) modalDiv.remove();
     }
 
     checkPressKey(e){
@@ -100,7 +100,7 @@ class AboutMe {
 
     createAchievements(){
         let achievementsBlock = document.createElement('div');
-        achievementsBlock.classList.add('achievements')
+        achievementsBlock.classList.add('achievements');
         let achievementsList = [
             {
                 count : 1,
@@ -111,8 +111,8 @@ class AboutMe {
                 title: 'Завершённых проэктов',
             },
             {
-                count: 23,
-                title: 'Счастливых клиентов',
+                count: 2,
+                title: 'Фреймворка',
             },
             {
                 count: 2,
@@ -170,15 +170,24 @@ class MeSkills {
                 title: 'css' 
             },
             {
-                persent: 70,
-                title: 'js' 
+                persent: 85,
+                title: 'Scss/Sass' 
             },
             {
                 persent: 80,
-                title: 'git' 
+                title: 'Bootstrap' 
             },
             {
-                persent: 50,
+                persent: 80,
+                title: 'Materialize' 
+            },
+            {
+                persent: 70,
+                title: 'js' 
+            },
+            ,
+            {
+                persent: 70,
                 title: 'jquery' 
             },
             {
@@ -186,12 +195,16 @@ class MeSkills {
                 title: 'type script' 
             },
             {
-                persent: 70,
-                title: 'wordpress' 
+                persent: 30,
+                title: 'angular' 
             },
             {
-                persent: 10,
-                title: 'angular' 
+                persent: 80,
+                title: 'git' 
+            },
+            {
+                persent: 70,
+                title: 'wordpress' 
             },
         ];
 
