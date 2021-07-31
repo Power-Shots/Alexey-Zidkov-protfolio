@@ -33,7 +33,7 @@ class Form {
                         <textarea type"text" placeholder="YOUR MESSAGE"></textarea>
                     </div>
                     <button class="send-message">
-                        Send message
+                        Отправить
                         <div class="icon-block"><i class="fab fa-telegram-plane"></i></div>
                     </button>
                 </form>
@@ -146,10 +146,9 @@ class Contact {
             <div class="info">
                 <h3>Жду ваших предложений</h3>
                 <p class="description">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non illum aut
-                    molestiae maxime labore ratione debitis hic laudantium exercitationem
-                    nesciunt cum odit ullam saepe consequuntur fugit aliquam optio,
-                    veritatis pariatur.
+                    Буду рад увидеть ваши предложения и обсудить их.
+                    Звоните по указанному ниже номеру телефона с 9:00 и
+                    до 19:00 по Киеву. Или же пишите мне на почту.
                 </p>
                 <div class="contact-data">
                     <div class="icon-block">
@@ -166,7 +165,7 @@ class Contact {
                     </div>
                     <p>
                         <span>Звоните</span>
-                        +75 641 214 42 01
+                        +380660312518
                     </p>
                 </div>
                 <div class="social-block">
