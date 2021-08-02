@@ -35,6 +35,16 @@ body {
   background-color: #111111;
 }
 
+::-moz-selection {
+  background-color: rgba(255, 177, 10, 0.996);
+  color: #fff;
+}
+
+::selection {
+  background-color: rgba(255, 177, 10, 0.996);
+  color: #fff;
+}
+
 ::-webkit-scrollbar {
   width: 4px;
   background-color: #2b2a2a;
@@ -1101,7 +1111,7 @@ body {
     text-align: center;
   }
   .home .container main .info .more-info-btn {
-    margin: 0 auto;
+    margin: 0 auto 25px auto;
   }
 }
 @media screen and (max-width: 768px) {
