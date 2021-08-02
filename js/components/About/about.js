@@ -75,7 +75,7 @@ class AboutMe {
                 <h3>Выберите язык</h3>
                     <div class="select-lang-block">
                         <a href="file/CV/CV_Alexey_Zhidkov_EN" class="download-link" download>
-                            Англйский
+                            Английский
                         </a>
                         <a href="file/CV/CV_Alexsey_Zhidkov_RU.pdf" class="download-link" download>
                             Русский
