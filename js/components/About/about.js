@@ -203,7 +203,7 @@ class MeSkills {
                 title: 'git' 
             },
             {
-                persent: 70,
+                persent: 20,
                 title: 'wordpress' 
             },
         ];
