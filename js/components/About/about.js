@@ -68,7 +68,7 @@ class AboutMe {
             <div class="cover" onclick="aboutMe1.closeModalWindow()">
             </div>
 
-            <div class="modal-block">
+            <div class="modal-block animate__animated animate__bounceInDown">
                 <button class="close" onclick="aboutMe1.closeModalWindow()">
                     <i class="fas fa-times icon"></i>
                 </button>
