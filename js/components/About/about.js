@@ -199,6 +199,10 @@ class MeSkills {
                 title: 'angular' 
             },
             {
+                persent: 50,
+                title: 'react' 
+            },
+            {
                 persent: 80,
                 title: 'git' 
             },
