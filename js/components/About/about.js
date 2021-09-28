@@ -207,8 +207,8 @@ class MeSkills {
                 title: 'git' 
             },
             {
-                persent: 20,
-                title: 'wordpress' 
+                persent: 90,
+                title: 'meister task<br/>trello' 
             },
         ];
 
