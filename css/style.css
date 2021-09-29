@@ -1109,6 +1109,12 @@ body {
     height: 200px;
     border-radius: 50%;
     border: 5px solid #2b2a2a;
+    overflow: hidden;
+  }
+  .home .container main .img-block img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: 120%;
   }
   .home .container main .info {
     width: 100%;

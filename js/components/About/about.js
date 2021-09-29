@@ -74,7 +74,7 @@ class AboutMe {
                 </button>
                 <h3>Выберите язык</h3>
                     <div class="select-lang-block">
-                        <a href="file/CV/CV_Alexey_Zhidkov_EN.pdf" class="download-link" download>
+                        <a href="file/CV/CV_Oleksii_Zhidkov_EN.pdf" class="download-link" download>
                             English
                         </a>
                         <a href="file/CV/CV_Alexsey_Zhidkov_RU.pdf" class="download-link" download>

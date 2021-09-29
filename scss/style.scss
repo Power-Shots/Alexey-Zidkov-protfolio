@@ -1091,6 +1091,13 @@ body {
                 height: 200px;
                 border-radius: 50%;
                 border: 5px solid $noAccentColor;
+                overflow: hidden;
+
+                img {
+                    object-fit: contain;
+                    height: 120%;
+                } 
+                
             }
 
             .info {
