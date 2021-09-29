@@ -77,7 +77,7 @@ class AboutMe {
                         <a href="file/CV/CV_Oleksii_Zhidkov_EN.pdf" class="download-link" download>
                             English
                         </a>
-                        <a href="file/CV/CV_Alexsey_Zhidkov_RU.pdf" class="download-link" download>
+                        <a href="file/CV/CV_Alexey_Zhidkov_RU.pdf" class="download-link" download>
                             Русский
                         </a>  
                     </div>
