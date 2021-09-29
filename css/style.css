@@ -152,10 +152,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
   position: fixed;
   z-index: 100;
   top: 20px;
   right: 20px;
+}
+#header header .mobile-menu-block .switch-menu__btn:hover {
+  font-size: 22px;
+  color: #ffffff;
 }
 #header header .mobile-menu-block .mobile-menu {
   width: 0%;
@@ -165,7 +170,6 @@ body {
   z-index: 10;
   top: 0;
   left: 0;
-  cursor: pointer;
   -webkit-transition: width 0.2s ease-out;
   transition: width 0.2s ease-out;
   overflow: hidden;
@@ -175,6 +179,7 @@ body {
   padding: 0 25px;
 }
 #header header .mobile-menu-block .mobile-menu ul li {
+  cursor: pointer;
   border-bottom: 1px solid #a5a5a5;
 }
 #header header .mobile-menu-block .mobile-menu ul li:last-child {
